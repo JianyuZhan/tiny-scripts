@@ -32,6 +32,6 @@ EOF
 
 # cc to myself too ;-)
 cc=${cc}" --cc nasa4836@gmail.com"
-cmd="git send-email "${to}${cc}" "$1
+cmd="git send-email --quiet "${to}${cc}" "$1
 echo $cmd
 exec $cmd
