@@ -5,7 +5,7 @@ die() {
 	exit 42
 }
 
-if [ $# != 1 ]; then
+if [ $# != 1 ] || [ "$1" == "-h" ]; then
 	die "Usage : ./`basename $0` <company name or its domain name>. E.g.\n\
 	\t./`basename $0` \"unitedstack.com\""
 fi
