@@ -53,9 +53,7 @@ elif [ -d "$1" ]; then
 	done
 fi
 
-# cc to myself too ;-)
-FINAL_CC_LIST=${CC_LIST}" --cc nasa4837@gmail.com"
-cmd="git send-email --smtp-server "${MSMTP_BIN}" --confirm=never "${TO_LIST}${FINAL_CC_LIST}" "$1
+cmd="git send-email --smtp-server "${MSMTP_BIN}" --quiet "${TO_LIST}${CC_LIST}" "$1
 
 echo
 echo $cmd
